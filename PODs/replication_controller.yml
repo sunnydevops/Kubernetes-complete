@@ -1,0 +1,28 @@
+apiVersion: v1
+Kind: ReplicationController
+metadata:
+  name: my-rc
+  labels:
+    app: web
+    type: front-end
+spec:
+  template:
+    metadata:
+      name: my-node
+      labels:
+        app: web
+        type: front-end
+    spec:
+      containers:
+        - image:  nginx
+          name:  nginx
+          env:
+          - name:  ENVVARNAME
+            value:  ENVVARVALUE
+  replicas: 3
+      
+
+
+         # $ kubectl apply -f replication_controller.yml
+         # $ kubectl get pods
+         # $ kubectl describe pods my-node

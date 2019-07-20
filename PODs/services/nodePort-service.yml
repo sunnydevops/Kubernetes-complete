@@ -1,0 +1,15 @@
+apiVersion: v1
+Kind: Services
+metadata:
+  name: my-svc
+spec:
+  type:
+  ports:
+    - targetPort: 80
+      port: 80
+      nodePort: 30008
+  selector:
+    app: web
+    type: front-end
+  
+   

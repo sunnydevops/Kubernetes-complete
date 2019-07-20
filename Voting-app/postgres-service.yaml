@@ -1,0 +1,17 @@
+apiVersion: v1
+Kind: Service
+metadata:
+  name: postgres-svc
+  labels:
+    name: post
+    type: red-ser
+spec:
+  type: 
+  ports:
+  - port: 5432
+    targetPort: 5432
+  selector:
+    app: postgres-db
+    name: database
+    
+
