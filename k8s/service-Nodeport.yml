@@ -11,4 +11,4 @@ spec:
      port: 80
      nodePort: 30008
  selector:  # pod labels
-  app: web
+   app: web
