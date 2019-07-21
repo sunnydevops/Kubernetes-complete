@@ -16,7 +16,7 @@ spec:
     containers:
     - image: jenkins
       name:  jenkins-image
- replicas: 3
+ replicas: 6
  selector:
    matchLabels:
      app: web

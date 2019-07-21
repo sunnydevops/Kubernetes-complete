@@ -8,5 +8,3 @@ spec:
   containers:
     - name: jenkins-image
       image: jenkins
-      Ports:
-      - containerPort: 8080
