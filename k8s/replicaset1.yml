@@ -16,8 +16,6 @@ spec:
     containers:
     - image: jenkins
       name:  jenkins-image
-      Ports:
-      - containerPort: 8080
  replicas: 3
  selector:
    matchLabels:
