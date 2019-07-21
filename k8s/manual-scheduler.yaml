@@ -1,0 +1,14 @@
+# creating "scheduling" for pods using "nodeName" 
+
+apiVersion: v1
+kind: Pod
+metadata:
+  name: manual-scheduler
+  labels:
+    app: web
+spec:
+  containers:
+    - name: nginx-image
+      image: nginx
+  nodeName: ip-172-31-45-36
+   
