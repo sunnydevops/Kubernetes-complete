@@ -1,0 +1,13 @@
+apiVersion: rbac.authorixation.k8s.io/v1
+kind: Role
+metadata:
+  name: developer
+rules:
+- apiGroups: [" "]
+  resources: ["pod"]
+  verbs: ["get","create","delete","update","list"]
+- apiGroups: [""]
+  resources: ["ConfigMap"]
+  verbs: ["create"]
+
+  # now add this group with rolebinding
